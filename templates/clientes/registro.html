@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de clientes</title>
+    
+    <link rel="stylesheet" href="/static/css/global.css">
+    <link rel="shortcut icon" href="#" />
+    <script src="/static/js/cliente.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Administración de Veterinaria</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/home">Inicio</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li><a href="/mascotas">Mascotas</a></li>
+            <li><a href="citas">Citas</a></li>
+        </ul>
+    </nav>
+    <main>
+        <div class="bgc">
+            <h1>Registro de clientes</h1>
+            <form id="formulariCliente" class="grilled2">
+                <div class="campo">
+                    <input type="hidden" id="id" name="id" value="0" />
+                    <label for="nombre">Nombres:</label>
+                    <label id="errnombre" class="error hidden">*</label><br />
+                    <input type="text" id="nombre" name="nombre" required onchange="ValidaObligatorio('nombre')">
+                </div>
+                <div class="campo">
+                    <label for="apellido">apellidos:</label>
+                    <label id="errapellido" class="error hidden">*</label><br />
+                    <input type="text" id="apellido" name="apellido" required onchange="ValidaObligatorio('apellido')">
+                </div>
+                <div class="campo">
+                    <label for="tipodocumento">Tipo documento:</label>
+                    <label id="errtipodocumento" class="error hidden">*</label><br>
+                    <select id="tipodocumento" name="tipodocumento" required onchange="ValidaObligatorio('tipodocumento')">
+                        <option value="">Seleccione</option>
+                        <option value="C.C.">Cédula de ciudadanía</option>
+                        <option value="Pasaporte">Pasaporte</option>
+                        <option value="T.I.">Tarjeta de identidad</option>
+                        <option value="NIT">NIT</option>
+                    </select>
+                </div>
+                <div class="campo">
+                    <label for="numerodocumento">Número de documento:</label>
+                    <label id="errnumerodocumento" class="error hidden">*</label>
+                    <input type="text" id="numerodocumento" name="numerodocumento" required onchange="ValidaObligatorio('numerodocumento')">
+                </div>
+                <div class="campo">
+                    <label for="edad">Edad:</label>
+                    <label id="erredad" class="error hidden">*</label>
+                    <input type="number" id="edad" name="edad">
+                </div>
+                <div class="campo">
+                    <label for="telefono">Teléfono:</label>
+                    <label id="errtelefono" class="error hidden">*</label>
+                    <input type="tel" id="telefono" name="telefono">
+                </div>
+                <div class="campobuttom" style="grid-column: 2;">
+                    <button class="button yes" onclick="Guardar(); return false;" ><span> Guardar</span></button> 
+                    <button class="button not" onclick="Cancelar(); return false; "><span> Cancelar</span></button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Veterinaria Mundo Animal</p>
+    </footer>
+    
+    <script lang="javascript">
+        document.addEventListener("DOMContentLoaded", Cargar());
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de mascotas</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="/static/css/global.css">
+    <link rel="shortcut icon" href="#" />
+    <script src="/static/js/mascota.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Administración de Veterinaria</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/home">Inicio</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li><a href="/mascotas">Mascotas</a></li>
+            <li><a href="/citas">Citas</a></li>
+        </ul>
+    </nav>
+    <div class="bgm">
+        <div class="tabla">
+            <div class="filters">
+                <h1>Mascotas</h1>
+                <th><button class="btn  btn_add" onclick="Listar()"><i class="fa fa-search"></i></button>
+                <div class="campos">
+                    <label for="filtrnombre">Mascota:</label>
+                    <input type="text" id="filtrnombre" name="filtrnombre" placeholder="Nombre">
+                </div>
+            </div>
+            <table id="tbRegistros">
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Especie</th>
+                        <th>Edad</th>
+                        <th><button class="btn  btn_add" onclick="Adicionar()"><i class="fa fa-paw"></i></button> </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- listado -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2023 Veterinaria Mundo Animal</p>
+    </footer>
+</body>
+<script lang="javascript">
+    document.addEventListener("DOMContentLoaded", Listar());
+</script>
+</html>

@@ -1,0 +1,273 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 90%;
+    background-color: #f7f7f7;
+}
+
+/**** CABECERA ****/
+header {
+    background-color: #f8f7f7;
+    background-image: url(../../static/images/mascotas.jpg);
+    height: 64px;
+    padding: 12px;
+    background-repeat-y: no-repeat;
+    margin: 21px 0 0 0;
+}
+
+header h1 {
+    color: #03d926;
+    margin: -40px 0px 0px 0px;
+    text-align: center;
+}
+
+h1 {
+    margin-block-start: 0;
+    padding: 1rem 1rem 0 1rem;
+    color: orangered;
+}
+
+/**** MENÚ ****/
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    background-color: #333;
+    overflow: hidden;
+    margin-block: 0;
+}
+
+nav li {
+    float: left;
+}
+
+nav a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+nav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+/**** CUERPO ****/
+form {
+    padding: 20px;
+    background-color: #d0cdcd7d;
+}
+
+.bg {
+    background: url(../../static/images/fondo.png) left top;
+    background-repeat-y: no-repeat;
+    height: 584px;
+    background-size: contain;
+}
+
+.bgc {
+    background: url(../../static/images/fondocliente.png) left top;
+    background-repeat-y: no-repeat;
+    height: 584px;
+    background-size: contain;
+}
+
+.bgs {
+    background: url(../../static/images/fondocita.png) left top;
+    background-repeat-y: no-repeat;
+    height: 584px;
+    background-size: contain;
+}
+
+.bgm {
+    background: url(../../static/images/fondomascota.png) left top;
+    background-repeat-y: no-repeat;
+    height: 584px;
+    background-size: contain;
+}
+
+.grilled2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 5px;
+    margin-right: 30%;
+    border-radius: 15px;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.tabla {
+    margin-right: 30%;
+    padding: 0 25px;
+}
+
+th,
+td {
+    border-style: solid;
+    border-width: 1px 0;
+    border-color: #036713;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+    text-align: center;
+}
+
+td {
+    background-color: #d0cdcd7d;
+    text-align: center;
+}
+
+.tdCenter {
+    text-align: center;
+}
+
+/**** COMPONENTES ****/
+label,
+input,
+select {
+    width: 90%;
+    margin: 5px;
+    font-size: 16px;
+    height: 22px;
+}
+
+label,
+input {
+    height: 22px;
+}
+
+label {
+    color: #036713
+}
+.error{
+    color:red;
+    font-size: x-small;
+    font-weight: bolder;
+    top: -15px;
+    position: relative;
+    left: -15px;
+}
+.hidden{
+    display: none;
+}
+
+.filters{
+    position: relative;}
+.filters h1{
+    float:left;
+}
+.filters div{
+    min-width: 133px;
+    width: 20%;
+}
+.filters button{
+    margin-top: 15px;
+    border: 0;
+}
+.filters div, .filters button{
+    float: right;
+    top: 0;
+}
+.filters label{
+    font-weight: bolder;
+    font-size: x-small;
+}
+.filters button i{
+    font-size: xx-large;
+}
+
+select {
+    height: 30px;
+}
+
+textarea {
+    width: 95%;
+}
+
+.campobuttom {
+    grid-column: 2;
+    text-align: right;
+    padding-right: 30px;
+}
+
+/**** BOTONES ****/
+.button {
+    display: inline-block;
+    border-radius: 4px;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 20px;
+    padding: 10px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+    margin: 5px;
+    height: 40px;
+}
+
+.yes {
+    background-color: #4CAF50;
+}
+
+.not {
+    background-color: salmon;
+}
+
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.button:hover span {
+    padding-right: 25px;
+}
+
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+.icongrid {
+    color: #4CAF50;
+}
+
+.btn_add {
+    color: green;
+}
+
+.btn_edit {
+    color: darkcyan;
+}
+
+.btn_trash {
+    color: red;
+}
+
+footer {
+    background-color: #333;
+    color: whitesmoke;
+    text-align: center;
+    bottom: 0px;
+    position: absolute;
+    width: 100%;
+}

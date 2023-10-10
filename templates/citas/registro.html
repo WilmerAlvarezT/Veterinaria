@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de clientes</title>
+    
+    <link rel="stylesheet" href="/static/css/global.css">
+    <link rel="shortcut icon" href="#" />
+    <script src="/static/js/cita.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>Administración de Veterinaria</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="/home">Inicio</a></li>
+            <li><a href="/clientes">Clientes</a></li>
+            <li><a href="/mascotas">Mascotas</a></li>
+            <li><a href="citas">Citas</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div class="bgs">
+            <h1>Registro de citas</h1>
+            <form id="formulariCliente" class="grilled2">
+                <div class="campo">
+                    <input type="hidden" id="id" name="id" value="0" />
+                   <label for="nombreMascota">Nombre de la Mascota:</label>
+                    <label id="errnombreMascota" class="error hidden">*</label>
+                    <input type="text" id="nombreMascota" name="nombreMascota" required onchange="ValidaObligatorio('nombreMascota')">
+                </div>
+                <div class="campo">
+                    <label for="propietario">Propietario:</label>
+                    <label id="errpropietario" class="error hidden">*</label>
+                    <input type="text" id="propietario" name="propietario" required onchange="ValidaObligatorio('propietario')">
+                </div>
+                <div class="campo">
+                    <label for="fechaCita">Fecha de la Cita:</label>
+                    <label id="errfechaCita" class="error hidden">*</label>
+                    <input type="date" id="fechaCita" name="fechaCita" required onchange="ValidaObligatorio('fechaCita')">
+                </div>
+                <div class="campo">
+                    <label for="horaCita">Hora de la Cita:</label>
+                    <label id="errhoraCita" class="error hidden">*</label>
+                    <input type="time" id="horaCita" name="horaCita" required onchange="ValidaObligatorio('horaCita')">
+                </div>
+                <div class="campo" style="grid-column: 1/3;">
+                    <label for="motivoCita">Motivo de la Cita:</label>
+                    <label id="errmotivoCita" class="error hidden">*</label>
+                    <textarea id="motivoCita" name="motivoCita" rows="4" required onchange="ValidaObligatorio('motivoCita')"></textarea>
+                </div>
+                <div class="campobuttom" style="grid-column: 2;">
+                    <button class="button yes" onclick="Guardar(); return false;" ><span> Agendar</span></button> 
+                    <button class="button not" onclick="Cancelar(); return false; "><span> Cancelar</span></button>
+                </div>
+            </form>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2023 Veterinaria Mundo Animal</p>
+    </footer>
+    
+    <script lang="javascript">
+        document.addEventListener("DOMContentLoaded", Cargar());
+    </script>
+</body>
+
+</html>
